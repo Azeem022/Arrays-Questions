@@ -1,0 +1,28 @@
+public class BestTimeToBuySellStock {
+
+    public static void main(String[] args) {
+
+        int[] prices = {7, 8, 5, 3, 6, 4};
+
+        int minPrice = prices[0];   // first day buy
+        int maxProfit = 0;
+
+        for (int i = 1; i < prices.length; i++) {
+
+            // agar aaj ka price sasta hai
+            if (prices[i] < minPrice) {
+                minPrice = prices[i];   // buy yahin
+            } 
+            // warna aaj sell karke profit check karo
+            else {
+                int profit = prices[i] - minPrice;
+
+                if (profit > maxProfit) {
+                    maxProfit = profit;
+                }
+            }
+        }
+
+        System.out.println("Maximum Profit = " + maxProfit);
+    }
+}
