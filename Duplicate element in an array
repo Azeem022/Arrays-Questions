@@ -35,9 +35,12 @@ public class Duplicate {
 
         for (int num : arr) {
 
-            if (!set.add(num)) {
-                duplicates.add(num);
-            }
+            if (set.contains(num)) {
+    duplicates.add(num);
+} else {
+    set.add(num);
+}
+
         }
 
         System.out.println("Duplicate elements are: " + duplicates);
