@@ -41,6 +41,7 @@ public class Duplicate {
     set.add(num);
 }
 
+
         }
 
         System.out.println("Duplicate elements are: " + duplicates);
