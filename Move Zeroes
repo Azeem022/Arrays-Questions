@@ -1,32 +1,31 @@
-public class MoveZeroes {
-
-    public static void moveZeroes(int[] nums) {
-
-        int j = 0;
-
-        for (int i = 0; i < nums.length; i++) {
-
-            // If current element is non-zero
-            if (nums[i] != 0) {
-
-                // Swap current element with position j
-                int temp = nums[i];
-                nums[i] = nums[j];
-                nums[j] = temp;
-
-                j++;
-            }
-        }
-    }
+public class Main {
 
     public static void main(String[] args) {
 
-        int[] nums = {0, 1, 0, 3, 12};
+        int[] arr = {1, 1, 0, 0, 1, 1, 0, 3, 0, 12};
 
-        moveZeroes(nums);
+        // j keeps track of the position where the next non-zero element should go
+        int j = 0;
 
-        for (int num : nums) {
-            System.out.print(num + " ");
+        // i traverses the complete array
+        for (int i = 0; i < arr.length; i++) {
+
+            // Check if the current element is non-zero
+            if (arr[i] != 0) {
+
+                // Swap the non-zero element with the element at index j
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+
+                // Move j to the next position
+                j++;
+            }
+        }
+
+        // Print the final array
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
         }
     }
 }
