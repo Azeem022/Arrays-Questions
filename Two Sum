@@ -1,6 +1,7 @@
 import java.util.HashMap;
 
 public class TwoSum {
+
     public static void main(String[] args) {
 
         int[] arr = {2, 7, 11, 15};
@@ -11,18 +12,18 @@ public class TwoSum {
         for (int i = 0; i < arr.length; i++) {
 
             int needed = target - arr[i];
-            System.out.println("Current: " + arr[i] + ", Needed: " + needed);
 
+            // Check if required number already exists
             if (map.containsKey(needed)) {
-                System.out.println("Answer: [" + map.get(needed) + ", " + i + "]");
+                System.out.println("[" + map.get(needed) + ", " + i + "]");
                 return;
             }
 
+            // Store number and its index
             map.put(arr[i], i);
         }
     }
 }
-
 
 =====================================================================================Brutforce approach=======================================================================================
 
