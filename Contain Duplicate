@@ -6,8 +6,8 @@ public class ContainsDuplicate {
 
         Set<Integer> set = new HashSet<>();
 
-        for (int num : nums) {
-            if (!set.add(num)) {
+        for (int num : nums) {                        |    if (set.add(num)) {      agr ye condition tru h to isko false kr dega or agr false h to tru kr dega                                             
+            if (!set.add(num)) {                      |    return true;
                 return true;   // duplicate found
             }
         }
