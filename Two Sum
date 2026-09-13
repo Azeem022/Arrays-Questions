@@ -13,11 +13,21 @@ public class TwoSum {
 
             int needed = target - arr[i];
 
-            // Check if required number already exists
+            // Check if required number already exists and print its index
             if (map.containsKey(needed)) {
                 System.out.println("[" + map.get(needed) + ", " + i + "]");
                 return;
             }
+                              or 
+                // Check if needed value already exists
+                if (map.containsKey(needed)) {
+ 
+                // Print values instead of indexes
+                System.out.println("[" + needed + ", " + arr[i] + "]");
+                return;
+            }
+
+
 
             // Store number and its index
             map.put(arr[i], i);
