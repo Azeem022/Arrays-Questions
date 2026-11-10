@@ -50,6 +50,7 @@ public class Main {
           if(sum == target){
             arr1[0]=i;
             arr1[1]=j;
+            break;
           }
         }
       }
